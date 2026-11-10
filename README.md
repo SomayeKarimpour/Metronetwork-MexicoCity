@@ -1,6 +1,6 @@
 # Metronetwork-MexicoCity
 Data repository and processing workflow for InSAR time-series analysis and structural deformation.
-This repository contains data access links, supplementary files, and a comprehensive methodological summary of the InSAR time-series and structural deformation analysis conducted for Mexico City Metro Line 12 (June 2020 – March 2026).
+This repository contains data access links, supplementary files, and a comprehensive methodological summary of the InSAR time-series and structural deformation analysis conducted for Mexico City Metro network (June 2020 – March 2026).
 
 ---
 
@@ -15,11 +15,10 @@ The raw radar datasets used in this study originate from the **Sentinel-1** sate
 While NASA provided the individual maps, **MintPy** acts as the Time Series Processor to stitch them all together:
 1. **Atmospheric Correction & Preparation:** MintPy reads the interferogram files and performs advanced atmospheric corrections using meteorological models (e.g., ERA5) to remove noise caused by water vapor.
 2. **Inversion & Phase Unwrapping:** MintPy solves a complex system of equations for every single pixel, converting phase connections into **179 independent displacement epochs/maps**.
-3. **Reference Point Selection:** Because InSAR is a relative measurement, a stable, mountainous area outside the main subsidence zone of Mexico City was chosen as our zero-reference point, ensuring that the measured subsidence in the city center is absolute and accurate.
-4. **Golden Files Output:** The final output yields key products, most notably the **3D Time Cube (`timeseries.h5`)**. This file contains the millimeter-scale movement for each pixel across all recorded dates (2020–2026), serving as the final target variable fed into our Transformer model for predictive analysis.
+3. **Golden Files Output:** The final output yields key products, most notably the **3D Time Cube (`timeseries.h5`)**. This file contains the centimeter-scale movement for each pixel across all recorded dates (2020–2026), serving as the final target variable fed into our Transformer model for predictive analysis.
 
 ### C. Metro Station & Infrastructure Data
-* **Line and Stations Geometry:** Spatial data for the metro lines and stations were obtained from the [CDMX Open Data Portal](https://www.datos.cdmx.gob.mx/dataset/lineas-y-estaciones-del-metro/resource/288b10dd-4f21-4338-b1ed-239487820512). *(A copy of these processed files is available in the [`data/metro/`](./data/metro/) folder of this repository).*
+* **Line and Stations Geometry:** Spatial data for the metro lines and stations were obtained from the [CDMX Open Data Portal](https://www.datos.cdmx.gob.mx/dataset/lineas-y-estaciones-del-metro/resource/288b10dd-4f21-4338-b1ed-239487820512). *(A copy of these files is available in the [`data/`](./data/) folder of this repository).*
 * **Station Usage & Statistics:** Additional operational and passenger statistics were retrieved from the [CDMX Metro Official Statistics](https://www.metro.cdmx.gob.mx/estacion-por-uso-y-tipo).
 
 ### D. Soil Type and Geotechnical Data
