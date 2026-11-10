@@ -22,7 +22,7 @@ While NASA provided the individual maps, **MintPy** acts as the Time Series Proc
 * **Station Usage & Statistics:** Additional operational and passenger statistics were retrieved from the [CDMX Metro Official Statistics](https://www.metro.cdmx.gob.mx/estacion-por-uso-y-tipo).
 
 ### D. Soil Type and Geotechnical Data
-* **Soil Classification:** Regional soil and geological information were acquired from the [INEGI Map Viewer](https://www.inegi.org.mx/app/mapas/). *(Sample or vector files used in this study are provided in the [`data/soil/`](./data/soil/) directory).*
+* **Soil Classification:** Regional soil and geological information were acquired from the [INEGI Map Viewer](https://www.inegi.org.mx/app/mapas/). *(Sample or vector files used in this study are provided in the [`data/`](./data/) directory).*
 
 ---
 
